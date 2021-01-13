@@ -1,9 +1,11 @@
 import React from "react";
+// Components
+import ContentGrid from "./ContentGrid/ContentGrid";
 
 const HomePage = () => {
   return (
     <section>
-      <h1>Home Page</h1>
+      <ContentGrid />
     </section>
   );
 };
