@@ -14,8 +14,9 @@ export const StyledForm = styled.form`
 `;
 
 export const StyledButton = styled(Button)`
+  font-weight: bold;
   margin-top: 1rem;
   margin-left: auto;
-  font-weight: bold;
+  padding: 0.8rem;
   width: 25%;
 `;

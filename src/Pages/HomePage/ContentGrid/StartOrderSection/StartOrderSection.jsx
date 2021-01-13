@@ -3,11 +3,11 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
 // Styled components
 import {
   StyledCard,
   StyledCardActions,
+  StyledButton,
 } from "./styles/StartOrderSection.styles";
 
 const StartOrderSection = () => {
@@ -20,13 +20,9 @@ const StartOrderSection = () => {
           </Typography>
         </CardContent>
         <StyledCardActions>
-          <Button
-            color="primary"
-            variant="contained"
-            style={{ fontWeight: "bold" }}
-          >
+          <StyledButton color="primary" variant="contained">
             Start Ordering
-          </Button>
+          </StyledButton>
         </StyledCardActions>
       </StyledCard>
     </Grid>
