@@ -13,12 +13,12 @@ import {
 
 const ContentGrid = () => {
   return (
-    <StyledContentGrid container>
-      <TopGrid container>
+    <StyledContentGrid container spacing={3}>
+      <TopGrid container spacing={3}>
         <SliderSection />
         <StartOrderSection />
       </TopGrid>
-      <BottomGrid container>
+      <BottomGrid container spacing={3}>
         <FindOrderSection />
         <ContentBoxSection />
       </BottomGrid>

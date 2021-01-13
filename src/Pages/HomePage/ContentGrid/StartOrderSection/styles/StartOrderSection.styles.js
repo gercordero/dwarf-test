@@ -4,7 +4,7 @@ import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 
 export const StyledCard = styled(Card)`
-  height: 100%;
+  height: 80%;
   position: relative;
 `;
 

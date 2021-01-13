@@ -7,9 +7,9 @@ export const StyledContentGrid = styled(Grid)`
 `;
 
 export const TopGrid = styled(Grid)`
-  height: 50%;
+  height: 60%;
 `;
 
 export const BottomGrid = styled(Grid)`
-  height: 50%;
+  height: 40%;
 `;
