@@ -7,14 +7,18 @@ import store from "./store";
 // Material UI
 import { ThemeProvider as MuiThemeProvider } from "@material-ui/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
+// Styled Components
+import { ThemeProvider } from "styled-components";
 // Theme
 import theme from "./styles/theme";
 
 ReactDOM.render(
   <Provider store={store()}>
     <MuiThemeProvider theme={theme}>
-      <CssBaseline />
-      <App />
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <App />
+      </ThemeProvider>
     </MuiThemeProvider>
   </Provider>,
   document.getElementById("root")
