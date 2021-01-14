@@ -11,11 +11,11 @@ import {
   BottomGrid,
 } from "./styles/ContentGrid.styles";
 
-const ContentGrid = () => {
+const ContentGrid = ({ dishes }) => {
   return (
     <StyledContentGrid container spacing={3}>
       <TopGrid container spacing={3}>
-        <SliderSection />
+        <SliderSection dishes={dishes} />
         <StartOrderSection />
       </TopGrid>
       <BottomGrid container spacing={3}>

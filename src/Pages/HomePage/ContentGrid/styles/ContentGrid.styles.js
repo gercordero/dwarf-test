@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Grid from "@material-ui/core/Grid";
 
 export const StyledContentGrid = styled(Grid)`
+  min-height: 80vh;
   height: 80vh;
 `;
 
