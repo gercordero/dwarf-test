@@ -8,6 +8,7 @@ export const StyledDiv = styled.div`
 `;
 
 export const StyledButton = styled(Button)`
+  font-weight: bold;
   margin-bottom: 1rem;
   padding: 0.7rem;
   width: 10rem;
