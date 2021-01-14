@@ -13,12 +13,12 @@ const getDishAction = () => async (dispatch) => {
     dispatch({ type: DISH_GET_REQUEST });
 
     // Fetch data
-    const { data } = await axios.get(
-      "https://www.themealdb.com/api/json/v1/1/random.php"
-    );
+    const {
+      data: { meals },
+    } = await axios.get("https://www.themealdb.com/api/json/v1/1/random.php");
 
     // Dispatch data if success
-    dispatch({ type: DISH_GET_SUCCESS, payload: data });
+    dispatch({ type: DISH_GET_SUCCESS, payload: meals[0] });
   } catch (error) {
     // Dispatch error if something while fetching fails
     dispatch({
