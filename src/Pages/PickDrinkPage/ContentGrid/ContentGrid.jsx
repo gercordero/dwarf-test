@@ -1,17 +1,20 @@
 import React from "react";
 // Components
+import { ContinueOrderSection, ContinueMessage } from "../../../Components";
 import DrinksCardsSection from "./DrinksCardsSection/DrinksCardsSection";
-import { ContinueOrderSection } from "../../../Components";
 // Styled components
 import { StyledContentGrid } from "./styles/ContentGrid.styles";
 
 const ContentGrid = ({ drinks, selected }) => {
+  // Message to show on the continue order section
+  const heading = "Happy with your drink?";
+  const message = "Please select at least 1 drink and then continue :)";
+
   return (
     <StyledContentGrid container spacing={3}>
       <DrinksCardsSection drinks={drinks} />
       <ContinueOrderSection
-        heading="Happy with your drink?"
-        message="Please select at least 1 drink and then continue :)"
+        render={() => <ContinueMessage heading={heading} message={message} />}
         path="/order"
         selected={selected}
       />
