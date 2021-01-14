@@ -1,8 +1,7 @@
 import React from "react";
 // React router
-import { Link as RouterLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 // Material UI
-import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
@@ -23,14 +22,13 @@ const StartOrderSection = () => {
           </Typography>
         </CardContent>
         <StyledCardActions>
-          <StyledButton color="primary" variant="contained">
-            <Link
-              component={RouterLink}
-              to="/pick-dish"
-              style={{ color: "inherit", textDecoration: "none" }}
-            >
-              Start Ordering
-            </Link>
+          <StyledButton
+            component={Link}
+            to="/pick-dish"
+            color="primary"
+            variant="contained"
+          >
+            Start Ordering
           </StyledButton>
         </StyledCardActions>
       </StyledCard>
