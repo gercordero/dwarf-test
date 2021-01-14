@@ -1,6 +1,7 @@
 import React from "react";
 // Components
 import { ErrorMessage, Loader } from "../../../Components";
+import ContentGrid from "../ContentGrid/ContentGrid";
 
 const Display = ({ status, error, dish }) => {
   switch (status) {
