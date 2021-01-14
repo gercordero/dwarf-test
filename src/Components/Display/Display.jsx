@@ -1,15 +1,14 @@
 import React from "react";
 // Components
-import { ErrorMessage, Loader } from "../../../Components";
-import ContentGrid from "../ContentGrid/ContentGrid";
+import { ErrorMessage, Loader } from "../";
 
-const Display = ({ status, error, dish }) => {
+const Display = ({ status, error, render }) => {
   switch (status) {
     case "LOADING":
       return <Loader />;
 
     case "SUCCESS":
-      return <ContentGrid dish={dish} />;
+      return render();
 
     case "ERROR":
       return <ErrorMessage message={error} />;

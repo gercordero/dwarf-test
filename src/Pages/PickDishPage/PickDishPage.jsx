@@ -4,7 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 // Redux actions
 import { getDishAction } from "../../actions/dish-actions";
 // Components
-import Display from "./Display/Display";
+import { Display } from "../../Components";
+import ContentGrid from "./ContentGrid/ContentGrid";
 
 const PickDishPage = () => {
   // Redux state
@@ -23,7 +24,10 @@ const PickDishPage = () => {
 
   return (
     <section>
-      <Display {...randomDishState} />
+      <Display
+        {...randomDishState}
+        render={() => <ContentGrid dish={dish} />}
+      />
     </section>
   );
 };
