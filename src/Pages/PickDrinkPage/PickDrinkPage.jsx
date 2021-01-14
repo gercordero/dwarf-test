@@ -16,7 +16,7 @@ const PickDrinkPage = () => {
   const { drinks } = drinksState;
 
   useEffect(() => {
-    // If we already have a drinks no need to get another one again :).
+    // If we already have a drinks no need to get them again :).
     if (!drinks) {
       dispatch(getDrinksAction());
     }

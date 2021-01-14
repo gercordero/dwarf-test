@@ -12,11 +12,11 @@ const HomePage = () => {
   const dispatch = useDispatch();
   const topDishesState = useSelector((state) => state.dishesGetTop);
 
-  // We need to destructure dish so we now if we already got them before
+  // We need to destructure dishes so we know if we already got them before
   const { dishes } = topDishesState;
 
   useEffect(() => {
-    // If we already have a dish no need to get another one again :).
+    // If we already have a dishes no need to get them again :).
     if (!dishes) {
       dispatch(getTopDishesAction());
     }

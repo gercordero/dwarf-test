@@ -12,7 +12,7 @@ const PickDishPage = () => {
   const dispatch = useDispatch();
   const randomDishState = useSelector((state) => state.dishGet);
 
-  // We need to destructure dish so we now if we already got them before
+  // We need to destructure dish so we know if we already got it before
   const { dish } = randomDishState;
 
   useEffect(() => {
