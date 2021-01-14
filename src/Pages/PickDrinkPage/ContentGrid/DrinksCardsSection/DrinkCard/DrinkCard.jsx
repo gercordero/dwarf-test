@@ -2,6 +2,7 @@ import React from "react";
 // Material UI
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 // Styled components
@@ -11,12 +12,14 @@ const DrinkCard = ({ name, image_url }) => {
   return (
     <Grid item md={6}>
       <Card>
-        <StyledCardMedia image={image_url} />
-        <CardContent>
-          <Typography variant="h5" component="h2">
-            {name}
-          </Typography>
-        </CardContent>
+        <CardActionArea>
+          <StyledCardMedia image={image_url} />
+          <CardContent>
+            <Typography variant="h5" component="h2">
+              {name}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
       </Card>
     </Grid>
   );
