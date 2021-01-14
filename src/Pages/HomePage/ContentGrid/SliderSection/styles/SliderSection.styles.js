@@ -1,6 +1,12 @@
 import styled from "styled-components";
+// Material UI
+import Grid from "@material-ui/core/Grid";
 // Slick slider
 import Slider from "react-slick";
+
+export const StyledGrid = styled(Grid)`
+  height: 100%;
+`;
 
 export const StyledDiv = styled.div`
   text-align: center;
@@ -53,10 +59,12 @@ export const StyledSlider = styled(Slider)`
 
 export const StyledImageContainer = styled.div`
   & {
-    width: 25rem !important;
+    height: 80%;
+    width: 60% !important;
     margin: 0 auto;
-    ${(props) => props.theme.breakpoints.up("lg")} {
-      width: 30rem !important;
-    }
+  }
+
+  & img {
+    height: 100%;
   }
 `;

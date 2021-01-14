@@ -2,10 +2,9 @@ import React from "react";
 // Components
 import SlickArrowLeft from "./SliderButtons/SlickArrowLeft";
 import SlickArrowRight from "./SliderButtons/SlickArrowRight";
-// Material UI
-import Grid from "@material-ui/core/Grid";
 // Styled components
 import {
+  StyledGrid,
   StyledDiv,
   StyledTitle,
   StyledSlider,
@@ -19,7 +18,7 @@ import "slick-carousel/slick/slick-theme.css";
 const settings = {
   fade: true,
   infinite: true,
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 5000,
   pauseOnHover: true,
   speed: 500,
@@ -31,7 +30,7 @@ const settings = {
 
 const SliderSection = ({ dishes }) => {
   return (
-    <Grid item xs={12} sm={12} md={8}>
+    <StyledGrid item xs={12} sm={12} md={8}>
       <StyledSlider {...settings}>
         {dishes.map((dish) => (
           <StyledDiv key={dish.idMeal}>
@@ -46,7 +45,7 @@ const SliderSection = ({ dishes }) => {
           </StyledDiv>
         ))}
       </StyledSlider>
-    </Grid>
+    </StyledGrid>
   );
 };
 
