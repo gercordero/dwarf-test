@@ -7,4 +7,9 @@ export const StyledDiv = styled.div`
   & > div {
     margin-right: 1rem;
   }
+
+  & > div > span {
+    text-transform: capitalize;
+    font-weight: bold;
+  }
 `;
