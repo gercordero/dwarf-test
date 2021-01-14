@@ -9,7 +9,7 @@ const DrinksCardsSection = ({ drinks }) => {
     <Grid item md={8}>
       <Grid container spacing={3}>
         {drinks.map((drink) => (
-          <DrinkCard key={drink.id} drink={drink} />
+          <DrinkCard key={drink.id} {...drink} />
         ))}
       </Grid>
     </Grid>

@@ -1,19 +1,16 @@
 import { DRINKS_STORE_ADD } from "../../constants/drinks-constants";
 
-const addDrinksToStoreAction = (newDrink) => (dispatch, getState) => {
+const addDrinksToStoreAction = (paramDrink) => (dispatch, getState) => {
   // Get actual drinks array stored in redux state
   const {
     drinksStore: { drinks },
   } = getState();
 
-  // We add a key "count" to the drink so we know how many we have
-  newDrink.count = 1;
-
-  // We destructure id to use it as a comparator
-  const { id } = newDrink;
+  // We create a new object with all the params so we are sure that we are not mutating an outside object.
+  const newDrink = { ...paramDrink, count: 1 };
 
   // We need to know if the drink clicked is already on the drinks array
-  const existDrink = drinks.find((drink) => drink.id === id);
+  const existDrink = drinks.find((drink) => drink.id === paramDrink.id);
 
   // Create a new array to use it in the if statement
   let updatedDrinks = [];
