@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
 export const StyledDiv = styled.div`
-  margin-top: 2rem;
   display: flex;
+  margin-top: 2rem;
+  ${(props) => props.theme.breakpoints.down("md")} {
+    margin-bottom: 15rem;
+  }
 
   & > div {
     margin-right: 1rem;

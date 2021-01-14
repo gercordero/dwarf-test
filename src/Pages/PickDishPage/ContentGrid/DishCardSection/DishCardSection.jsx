@@ -3,13 +3,14 @@ import React from "react";
 import Ingridients from "./Ingridients/Ingridients";
 import GenerateNewDish from "./GenerateNewDish/GenerateNewDish";
 // Materail UI
-import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 // Styled components
 import {
+  StyledGrid,
   StyledCard,
   StyledCardMedia,
   StyledCardContent,
+  InstructionsContainer,
 } from "./styles/DishCardSection.styles";
 
 const DishCardSection = ({
@@ -32,7 +33,7 @@ const DishCardSection = ({
   };
 
   return (
-    <Grid item md={8}>
+    <StyledGrid item md={8}>
       {/* Dish Card */}
       <StyledCard>
         <StyledCardMedia image={strMealThumb} />
@@ -40,9 +41,11 @@ const DishCardSection = ({
           <Typography variant="h4" component="h2">
             {strMeal}
           </Typography>
-          <Typography variant="body1" color="textSecondary" component="p">
-            {strInstructions.slice(0, 1024)}
-          </Typography>
+          <InstructionsContainer>
+            <Typography variant="body1" color="textSecondary" component="p">
+              {strInstructions}
+            </Typography>
+          </InstructionsContainer>
           <Typography variant="h5" component="h3" style={{ marginTop: "2rem" }}>
             Ingridients
           </Typography>
@@ -51,7 +54,7 @@ const DishCardSection = ({
       </StyledCard>
       {/* Generate new dish button */}
       <GenerateNewDish />
-    </Grid>
+    </StyledGrid>
   );
 };
 
