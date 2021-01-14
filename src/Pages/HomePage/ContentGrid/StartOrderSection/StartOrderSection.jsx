@@ -23,11 +23,15 @@ const StartOrderSection = () => {
           </Typography>
         </CardContent>
         <StyledCardActions>
-          <Link component={RouterLink} to="/pick-dish">
-            <StyledButton color="primary" variant="contained">
+          <StyledButton color="primary" variant="contained">
+            <Link
+              component={RouterLink}
+              to="/pick-dish"
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
               Start Ordering
-            </StyledButton>
-          </Link>
+            </Link>
+          </StyledButton>
         </StyledCardActions>
       </StyledCard>
     </Grid>
