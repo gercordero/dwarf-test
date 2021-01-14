@@ -3,23 +3,21 @@ import React from "react";
 import { useDispatch } from "react-redux";
 // Redux actions
 import { getDishAction } from "../../../../../actions/dish-actions";
-// Material UI
-import Button from "@material-ui/core/Button";
 // Styled Components
-import { StyledDiv } from "./styles/GenerateNewDish.styles";
+import { StyledDiv, StyledButton } from "./styles/GenerateNewDish.styles";
 
 const GenerateNewDish = () => {
   const dispatch = useDispatch();
 
   return (
     <StyledDiv>
-      <Button
+      <StyledButton
         variant="contained"
         color="primary"
         onClick={() => dispatch(getDishAction())}
       >
-        Generate New
-      </Button>
+        Generate New Dish
+      </StyledButton>
     </StyledDiv>
   );
 };

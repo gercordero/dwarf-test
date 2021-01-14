@@ -22,6 +22,7 @@ const DishCardSection = ({
   strIngredient4,
   strIngredient5,
 }) => {
+  // Easy way to pass props to child component
   const propsForIngridients = {
     strIngredient1,
     strIngredient2,
