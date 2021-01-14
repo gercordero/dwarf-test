@@ -11,7 +11,7 @@ const dishesGetTopReducer = (state = { status: "LOADING" }, action) => {
       return { status: "LOADING" };
 
     case DISHES_TOP_GET_SUCCESS:
-      return { status: "SUCCESS", dish: action.payload };
+      return { status: "SUCCESS", dishes: action.payload };
 
     case DISHES_TOP_GET_FAIL:
       return { status: "ERROR", error: action.payload };
