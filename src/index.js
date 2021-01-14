@@ -4,6 +4,7 @@ import App from "./App";
 // Redux
 import { Provider } from "react-redux";
 import store from "./store";
+import initialState from "./redux/initialState";
 // Material UI
 import { ThemeProvider as MuiThemeProvider } from "@material-ui/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -13,7 +14,7 @@ import { ThemeProvider } from "styled-components";
 import theme from "./styles/theme";
 
 ReactDOM.render(
-  <Provider store={store()}>
+  <Provider store={store(initialState)}>
     <MuiThemeProvider theme={theme}>
       <ThemeProvider theme={theme}>
         <CssBaseline />

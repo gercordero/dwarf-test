@@ -12,7 +12,7 @@ const DrinkCard = ({ name, image_url }) => {
   return (
     <Grid item md={6}>
       <Card>
-        <CardActionArea>
+        <CardActionArea onClick={() => console.log("Hello")}>
           <StyledCardMedia image={image_url} />
           <CardContent>
             <Typography variant="h5" component="h2">
