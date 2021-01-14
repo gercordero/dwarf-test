@@ -13,6 +13,7 @@ const ContentGrid = ({ dish }) => {
         heading="Like what you see?"
         message="If you like this dish click on continue"
         path="/pick-drink"
+        selected={true}
       />
     </StyledContentGrid>
   );

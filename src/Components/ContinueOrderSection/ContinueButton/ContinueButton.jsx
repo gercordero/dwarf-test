@@ -6,14 +6,18 @@ import Link from "@material-ui/core/Link";
 // Styled component
 import { StyledDiv, StyledButton } from "./styles/ContinueButton.styles";
 
-const ContinueButton = ({ path }) => {
+const ContinueButton = ({ path, selected }) => {
   return (
     <StyledDiv>
-      <Link component={RouterLink} to={path}>
-        <StyledButton variant="contained" color="primary">
+      <StyledButton variant="contained" color="primary" disabled={selected}>
+        <Link
+          component={RouterLink}
+          to={path}
+          style={{ color: "inherit", textDecoration: "none" }}
+        >
           Continue
-        </StyledButton>
-      </Link>
+        </Link>
+      </StyledButton>
     </StyledDiv>
   );
 };

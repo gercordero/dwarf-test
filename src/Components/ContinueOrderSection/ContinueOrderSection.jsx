@@ -8,7 +8,7 @@ import Typography from "@material-ui/core/Typography";
 // Styled components
 import { StyledCardContent } from "./styles/ContinueOrderSection.styles";
 
-const ContinueOrderSection = ({ heading, message, path }) => {
+const ContinueOrderSection = ({ heading, message, path, selected }) => {
   return (
     <Grid item xs={12} sm={12} md={4}>
       <Card>
@@ -20,7 +20,7 @@ const ContinueOrderSection = ({ heading, message, path }) => {
             {message}
           </Typography>
         </StyledCardContent>
-        <ContinueButton path={path} />
+        <ContinueButton path={path} selected={selected} />
       </Card>
     </Grid>
   );
