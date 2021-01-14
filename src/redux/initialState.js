@@ -5,7 +5,7 @@ const drinksFromLocalStorage = localStorage.getItem("drinks")
 
 // Initial state
 const initialState = {
-  drinksStore: drinksFromLocalStorage,
+  drinksStore: { drinks: drinksFromLocalStorage },
 };
 
 export default initialState;
