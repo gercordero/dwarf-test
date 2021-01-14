@@ -5,7 +5,7 @@ import CardActions from "@material-ui/core/CardActions";
 import Button from "@material-ui/core/Button";
 
 export const StyledCard = styled(Card)`
-  height: 80%;
+  height: 100%;
   position: relative;
 `;
 
