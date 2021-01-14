@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // Styled component
 import { StyledDiv, StyledButton } from "./styles/ContinueButton.styles";
 
-const ContinueButton = ({ path, selected }) => {
+const ContinueButton = ({ path, disableButton }) => {
   return (
     <StyledDiv>
       <StyledButton
@@ -12,7 +12,7 @@ const ContinueButton = ({ path, selected }) => {
         to={path}
         variant="contained"
         color="primary"
-        disabled={selected}
+        disabled={disableButton}
       >
         Continue
       </StyledButton>

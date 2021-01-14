@@ -16,7 +16,7 @@ const ContentGrid = ({ dish }) => {
       <ContinueOrderSection
         render={() => <ContinueMessage heading={heading} message={message} />}
         path="/pick-drink"
-        selected={false}
+        disableButton={false}
       />
     </StyledContentGrid>
   );

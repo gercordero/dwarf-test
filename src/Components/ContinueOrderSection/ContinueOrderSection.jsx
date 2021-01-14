@@ -7,12 +7,12 @@ import Card from "@material-ui/core/Card";
 // Styled components
 import { StyledCardContent } from "./styles/ContinueOrderSection.styles";
 
-const ContinueOrderSection = ({ render, path, selected }) => {
+const ContinueOrderSection = ({ render, path, disableButton }) => {
   return (
     <Grid item xs={12} sm={12} md={4}>
       <Card>
         <StyledCardContent>{render()}</StyledCardContent>
-        <ContinueButton path={path} selected={selected} />
+        <ContinueButton path={path} disableButton={disableButton} />
       </Card>
     </Grid>
   );
