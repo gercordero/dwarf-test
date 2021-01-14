@@ -7,7 +7,7 @@ import { StyledContentGrid } from "./styles/ContentGrid.styles";
 const ContentGrid = ({ dish }) => {
   return (
     <StyledContentGrid container spacing={3}>
-      <DishCardSection imageUrl={dish.strMealThumb} />
+      <DishCardSection {...dish} />
     </StyledContentGrid>
   );
 };
