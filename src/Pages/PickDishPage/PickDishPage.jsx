@@ -3,6 +3,8 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 // Redux actions
 import { getDishAction } from "../../actions/dish-actions";
+// Components
+import Display from "./Display/Display";
 
 const PickDishPage = () => {
   // Redux state
@@ -19,7 +21,11 @@ const PickDishPage = () => {
     }
   }, [dispatch, dish]);
 
-  return <section></section>;
+  return (
+    <section>
+      <Display {...randomDishState} />
+    </section>
+  );
 };
 
 export default PickDishPage;
