@@ -9,6 +9,7 @@ export const StyledCard = styled(Card)`
 `;
 
 export const StyledForm = styled.form`
+  margin-top: 10%;
   display: flex;
   flex-direction: column;
 `;
