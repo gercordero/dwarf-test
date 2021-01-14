@@ -8,7 +8,7 @@ import { StyledContentGrid } from "./styles/ContentGrid.styles";
 const ContentGrid = ({ drinks, selected }) => {
   return (
     <StyledContentGrid container spacing={3}>
-      <DrinksCardsSection {...drinks} />
+      <DrinksCardsSection drinks={drinks} />
       <ContinueOrderSection
         heading="Happy with your drink?"
         message="Please select at least 1 drink and then continue :)"
