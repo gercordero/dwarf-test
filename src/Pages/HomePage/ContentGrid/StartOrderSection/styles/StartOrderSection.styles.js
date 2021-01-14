@@ -6,14 +6,14 @@ import Button from "@material-ui/core/Button";
 
 export const StyledCard = styled(Card)`
   height: 100%;
-  position: relative;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const StyledCardActions = styled(CardActions)`
   align-items: center;
-  bottom: 0;
   justify-content: center;
-  position: absolute;
+  margin-top: auto;
   width: 100%;
 `;
 
