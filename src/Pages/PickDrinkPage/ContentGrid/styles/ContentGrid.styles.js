@@ -3,5 +3,5 @@ import styled from "styled-components";
 import Grid from "@material-ui/core/Grid";
 
 export const StyledContentGrid = styled(Grid)`
-  height: 80vh;
+  /* height: 80vh; */
 `;

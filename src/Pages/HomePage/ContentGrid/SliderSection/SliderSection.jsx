@@ -18,7 +18,7 @@ import "slick-carousel/slick/slick-theme.css";
 const settings = {
   fade: true,
   infinite: true,
-  autoplay: false,
+  autoplay: true,
   autoplaySpeed: 5000,
   pauseOnHover: true,
   speed: 500,

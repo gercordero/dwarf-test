@@ -6,10 +6,12 @@ import Grid from "@material-ui/core/Grid";
 
 const DrinksCardsSection = ({ drinks }) => {
   return (
-    <Grid container>
-      {drinks.map((drink) => (
-        <DrinkCard key={drink.id} {...drink} />
-      ))}
+    <Grid item md={8}>
+      <Grid container spacing={3}>
+        {drinks.map((drink) => (
+          <DrinkCard key={drink.id} {...drink} />
+        ))}
+      </Grid>
     </Grid>
   );
 };
