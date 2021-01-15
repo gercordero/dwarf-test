@@ -21,7 +21,7 @@ const FindOrderSection = () => {
           </Typography>
         </CardContent>
         <CardContent>
-          <StyledForm>
+          <StyledForm onSubmit={(e) => e.preventDefault()}>
             <TextField variant="outlined" typ="email" label="Email" />
             <StyledButton type="submit" color="primary" variant="contained">
               Find
