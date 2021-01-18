@@ -1,6 +1,7 @@
 import React from "react";
 // Components
 import Calendar from "./Calendar/Calendar";
+import FormSection from "./FormSection/FormSection";
 // Styled components
 import { StyledContentGrid } from "./styles/ContentGrid.styles";
 // Material UI
@@ -13,7 +14,7 @@ const ContentGrid = () => {
         <Calendar />
       </Grid>
       <Grid item md={7}>
-        <h1>RANDOM TEXT</h1>
+        <FormSection />
       </Grid>
     </StyledContentGrid>
   );
