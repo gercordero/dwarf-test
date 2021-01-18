@@ -1,1 +1,1 @@
-export { default as orderDateReducer } from "./orderDateReducer";
+export { default as orderReducer } from "./orderReducer";

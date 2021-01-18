@@ -19,8 +19,11 @@ import "./styles/Calendar.css";
 
 const Calendar = () => {
   // Redux state
-  const { date } = useSelector((state) => state.orderDate);
+  const { date } = useSelector((state) => state.order);
   const dispatch = useDispatch();
+
+  console.log("CALENDAR");
+  console.log(date);
 
   return (
     <Grid item md={12} style={{ padding: 12 }}>

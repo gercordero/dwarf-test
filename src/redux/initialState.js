@@ -3,15 +3,15 @@ const drinksFromLocalStorage = localStorage.getItem("drinks")
   ? JSON.parse(localStorage.getItem("drinks"))
   : [];
 
-// Geting order date from local store
-const orderDateFromLocalStorage = localStorage.getItem("orderDate")
-  ? JSON.parse(localStorage.getItem("orderDate"))
-  : null;
+// Geting order data from local store
+const orderFromLocalStorage = localStorage.getItem("order")
+  ? JSON.parse(localStorage.getItem("order"))
+  : { date: null, email: "", peopleAmount: 1 };
 
 // Initial state
 const initialState = {
   drinksStore: { drinks: drinksFromLocalStorage },
-  orderDate: { date: orderDateFromLocalStorage },
+  order: { ...orderFromLocalStorage },
 };
 
 export default initialState;
