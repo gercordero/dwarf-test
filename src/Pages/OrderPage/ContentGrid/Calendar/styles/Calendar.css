@@ -1,0 +1,5 @@
+.responsive-calendar {
+  /* by setting font-size, all the elements will correspond */
+  width: 100%;
+  font-size: 0.9rem !important; /* default to 10px */
+}

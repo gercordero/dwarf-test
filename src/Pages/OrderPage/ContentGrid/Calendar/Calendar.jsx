@@ -12,6 +12,10 @@ import {
 // Utils
 import { getMaximunDateParsed } from "./utils/maxDate";
 import { getDisableDays } from "./utils/disableDays";
+// Material UI
+import Grid from "@material-ui/core/Grid";
+// Styles
+import "./styles/Calendar.css";
 
 const Calendar = () => {
   // Redux state
@@ -19,16 +23,17 @@ const Calendar = () => {
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <Grid item md={12} style={{ padding: 12 }}>
       <DatePicker
         value={date}
         onChange={(date) => dispatch(setOrderDate(date))}
         minimumDate={utils().getToday()}
         maximumDate={getMaximunDateParsed(3)}
         disabledDays={getDisableDays(3)}
+        calendarClassName="responsive-calendar"
         colorPrimary="#BA2329"
       />
-    </div>
+    </Grid>
   );
 };
 
