@@ -1,4 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
+// Redux
+import { useDispatch, useSelector } from "react-redux";
+// Redux actions
+import { setOrderDate } from "../../../../actions/order-actions";
 //Date Picker
 import "react-modern-calendar-datepicker/lib/DatePicker.css";
 import {
@@ -10,13 +14,15 @@ import { getMaximunDateParsed } from "./utils/maxDate";
 import { getDisableDays } from "./utils/disableDays";
 
 const Calendar = () => {
-  const [selectedDay, setSelectedDay] = useState(null);
+  // Redux state
+  const { date } = useSelector((state) => state.orderDate);
+  const dispatch = useDispatch();
 
   return (
     <div>
       <DatePicker
-        value={selectedDay}
-        onChange={setSelectedDay}
+        value={date}
+        onChange={(date) => dispatch(setOrderDate(date))}
         minimumDate={utils().getToday()}
         maximumDate={getMaximunDateParsed(3)}
         disabledDays={getDisableDays(3)}
