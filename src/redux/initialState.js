@@ -1,3 +1,8 @@
+// Geting dish from local storage
+const dishFromLocalStorage = localStorage.getItem("dish")
+  ? JSON.parse(localStorage.getItem("dish"))
+  : {};
+
 // Geting drinks from local store
 const drinksFromLocalStorage = localStorage.getItem("drinks")
   ? JSON.parse(localStorage.getItem("drinks"))
@@ -10,6 +15,7 @@ const orderFromLocalStorage = localStorage.getItem("order")
 
 // Initial state
 const initialState = {
+  dishStore: { dish: dishFromLocalStorage },
   drinksStore: { drinks: drinksFromLocalStorage },
   order: { ...orderFromLocalStorage },
 };

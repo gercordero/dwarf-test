@@ -29,10 +29,10 @@ const addDrinksToStoreAction = (paramDrink) => (dispatch, getState) => {
     updatedDrinks = [...drinks, newDrink];
   }
 
-  // Add to store updated drinks array
+  // Add updated drinks array to store
   dispatch({ type: DRINKS_STORE_ADD, payload: updatedDrinks });
 
-  // Save drinks data to local storage
+  // Save drinks data in local storage
   localStorage.setItem("drinks", JSON.stringify(updatedDrinks));
 };
 

@@ -2,6 +2,7 @@
 export const DRINKS_GET_REQUEST = "DRINKS_GET_REQUEST";
 export const DRINKS_GET_SUCCESS = "DRINKS_GET_SUCCESS";
 export const DRINKS_GET_FAIL = "DRINKS_GET_FAIL";
-// Add drinks to store
+// Drinks store
 export const DRINKS_STORE_ADD = "DRINKS_STORE_ADD";
 export const DRINKS_STORE_REMOVE = "DRINKS_STORE_REMOVE";
+export const DRINKS_STORE_RESET = "DRINKS_STORE_RESET";
