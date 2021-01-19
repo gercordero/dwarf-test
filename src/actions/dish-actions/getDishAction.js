@@ -19,6 +19,9 @@ const getDishAction = () => async (dispatch) => {
 
     // Dispatch data if success
     dispatch({ type: DISH_GET_SUCCESS, payload: meals[0] });
+
+    // Save fetched dish to local storage
+    localStorage.setItem("dish", JSON.stringify(meals[0]));
   } catch (error) {
     // Dispatch error if something while fetching fails
     dispatch({

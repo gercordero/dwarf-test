@@ -1,7 +1,7 @@
 // Geting dish from local storage
 const dishFromLocalStorage = localStorage.getItem("dish")
   ? JSON.parse(localStorage.getItem("dish"))
-  : {};
+  : null;
 
 // Geting drinks from local store
 const drinksFromLocalStorage = localStorage.getItem("drinks")
@@ -15,7 +15,10 @@ const orderFromLocalStorage = localStorage.getItem("order")
 
 // Initial state
 const initialState = {
-  dishStore: { dish: dishFromLocalStorage },
+  dishGet: {
+    dish: dishFromLocalStorage,
+    status: dishFromLocalStorage ? "SUCCESS" : "LOADING",
+  },
   drinksStore: { drinks: drinksFromLocalStorage },
   order: { ...orderFromLocalStorage },
 };
