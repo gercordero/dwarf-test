@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 // Redux
 import { useSelector } from "react-redux";
+// Components
+import ContentGrid from "./ContentGrid/ContentGrid";
 
 const ReceiptPage = ({ history }) => {
   // Redux state
@@ -22,7 +24,7 @@ const ReceiptPage = ({ history }) => {
   }, [history, dish, drinks, order]);
   return (
     <section>
-      <h1>Receipt Page</h1>
+      <ContentGrid />
     </section>
   );
 };
