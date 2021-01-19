@@ -12,6 +12,7 @@ export const DishContainer = styled.div`
 
 export const DrinksContainer = styled.div`
   border: 1px solid gray;
+  margin-left: 3rem;
   margin-top: 1rem;
   width: 50%;
 `;
