@@ -4,7 +4,10 @@ import { useHistory } from "react-router-dom";
 // Redux
 import { useDispatch, useSelector } from "react-redux";
 // Redux actions
-import { setOrderEmailAction } from "../../../../actions/order-actions";
+import {
+  setOrderEmailAction,
+  addToOrdersAction,
+} from "../../../../actions/order-actions";
 // Components
 import SelectPeople from "./SelectPeople/SelectPeople";
 import EmailField from "./EmailField/EmailField";
@@ -21,9 +24,10 @@ const FormSection = () => {
   // Form state
   const [formEmail, setFormEmail] = useState("");
   const [formError, setFormError] = useState(true);
+  const [submiting, setSubmitting] = useState(false);
 
   // Redux state
-  const { date } = useSelector((state) => state.order);
+  const order = useSelector((state) => state.order);
   const dispatch = useDispatch();
 
   // Use history
@@ -35,7 +39,7 @@ const FormSection = () => {
 
     if (!formError) {
       dispatch(setOrderEmailAction(formEmail));
-      history.push("/receipt");
+      setSubmitting(true);
     }
   };
 
@@ -44,8 +48,15 @@ const FormSection = () => {
     setFormEmail(email);
   };
 
+  // Check if submiting and order email has changed,
+  // then dispatch add order to store and go to next page.
+  if (submiting && order.email !== "") {
+    dispatch(addToOrdersAction(order));
+    history.push("/receipt");
+  }
+
   // Disable confirm button
-  const disabled = date == null || formError ? true : false;
+  const disabled = order.date == null || formError ? true : false;
 
   // An easy way to pass props to child component
   const propsForEmailField = {
