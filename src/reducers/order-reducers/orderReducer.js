@@ -11,13 +11,13 @@ const orderReducer = (
 ) => {
   switch (action.type) {
     case ORDER_DATE_SET:
-      return { date: action.payload };
+      return { ...state, date: action.payload };
 
     case ORDER_EMAIL_SET:
-      return { email: action.payload };
+      return { ...state, email: action.payload };
 
     case ORDER_PEOPLE_AMOUNT_SET:
-      return { peopleAmount: action.payload };
+      return { ...state, peopleAmount: action.payload };
 
     case ORDER_RESET:
       return { date: null, email: "", peopleAmount: 1 };
