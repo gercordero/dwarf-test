@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 // Validation
-import validateEmail from "../../../../../validation/validateEmail";
+import validateEmail from "../../validation/validateEmail";
 // Material UI
 import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
 import FormHelperText from "@material-ui/core/FormHelperText";
 
-const EmailField = ({ setFormError, onEmailChange }) => {
+const EmailField = ({ setFormError, onEmailChange, headingStyle = {} }) => {
   // Error state
   const [error, setError] = useState("");
 
@@ -41,7 +41,7 @@ const EmailField = ({ setFormError, onEmailChange }) => {
   };
   return (
     <>
-      <Typography variant="h5" gutterBottom style={{ marginTop: "3rem" }}>
+      <Typography variant="h5" gutterBottom style={headingStyle}>
         Enter your email:
       </Typography>
       <TextField

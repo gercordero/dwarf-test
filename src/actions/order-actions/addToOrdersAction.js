@@ -12,25 +12,26 @@ const addDrinksToStoreAction = (paramOrder, paramDish, paramDrinks) => (
     ordersStore: { orders },
   } = getState();
 
-  //
+  // We create a new object with everything inside paramOrder, paramDish and paramDrinks,
+  // so we are sure that we are not mutating any object from outside this function.
+  const newOrder = {
+    id: nanoid(),
+    ...paramOrder,
+    dish: paramDish,
+    drinks: paramDrinks,
+  };
+
+  // Look for the matching order in orders array
+  const existOrder = orders.find((order) => order.email === paramOrder.email);
+
   let updatedOrders = [];
-  // If paramOrder has an id means that the order exists from before, so we need to check for that.
-  if (paramOrder.id) {
-    // Look for the matching order in orders array
-    const existOrder = orders.find((order) => order.id === paramOrder.id);
+
+  if (existOrder) {
     // We map through the orders and replace the existing one
     updatedOrders = orders.map((order) =>
-      order.id === existOrder.id ? existOrder : order
+      order.id === existOrder.id ? newOrder : order
     );
   } else {
-    // We create a new object with everything inside paramOrder, paramDish and paramDrinks,
-    // so we are sure that we are not mutating any object from outside this function.
-    const newOrder = {
-      id: nanoid(),
-      ...paramOrder,
-      dish: paramDish,
-      drinks: paramDrinks,
-    };
     // We put orders and the new order together
     updatedOrders = [...orders, newOrder];
   }

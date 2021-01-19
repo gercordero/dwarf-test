@@ -9,7 +9,7 @@ export const StyledCard = styled(Card)`
 `;
 
 export const StyledForm = styled.form`
-  margin-top: 10%;
+  margin-top: 7%;
   display: flex;
   flex-direction: column;
 `;

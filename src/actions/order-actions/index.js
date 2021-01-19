@@ -3,3 +3,4 @@ export { default as setOrderPeopleAmountAction } from "./setOrderPeopleAmountAct
 export { default as setOrderEmailAction } from "./setOrderEmailAction";
 export { default as resetOrderAction } from "./resetOrderAction";
 export { default as addToOrdersAction } from "./addToOrdersAction";
+export { default as findOrderAction } from "./findOrderAction";

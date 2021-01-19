@@ -1,3 +1,6 @@
+// Add order object directly
+export const ORDER_ADD = "ORDER_ADD";
+
 // Set order date
 export const ORDER_DATE_SET = "ORDER_DATE_SET";
 

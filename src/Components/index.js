@@ -8,3 +8,4 @@ export { default as ContinueMessage } from "./ContinueMessage/ContinueMessage";
 export { default as Ingridients } from "./Ingridients/Ingridients";
 export { default as DrinksList } from "./DrinksList/DrinksList";
 export { default as ReceiptCard } from "./ReceiptCard/ReceiptCard";
+export { default as EmailField } from "./EmailField/EmailField";

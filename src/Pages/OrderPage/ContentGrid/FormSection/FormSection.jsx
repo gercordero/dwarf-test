@@ -10,7 +10,7 @@ import {
 } from "../../../../actions/order-actions";
 // Components
 import SelectPeople from "./SelectPeople/SelectPeople";
-import EmailField from "./EmailField/EmailField";
+import { EmailField } from "../../../../Components";
 // Material UI
 import Typography from "@material-ui/core/Typography";
 // Styled Components
@@ -64,6 +64,7 @@ const FormSection = () => {
   const propsForEmailField = {
     onEmailChange,
     setFormError,
+    headingStyle: { marginTop: "3rem" },
   };
 
   return (

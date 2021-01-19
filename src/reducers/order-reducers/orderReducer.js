@@ -1,4 +1,5 @@
 import {
+  ORDER_ADD,
   ORDER_DATE_SET,
   ORDER_EMAIL_SET,
   ORDER_PEOPLE_AMOUNT_SET,
@@ -10,6 +11,9 @@ const orderReducer = (
   action
 ) => {
   switch (action.type) {
+    case ORDER_ADD:
+      return { ...action.payload };
+
     case ORDER_DATE_SET:
       return { ...state, date: action.payload };
 
