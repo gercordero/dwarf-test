@@ -22,11 +22,8 @@ const ReceiptPage = ({ history }) => {
       history.push("/order");
     }
   }, [history, dish, drinks, order]);
-  return (
-    <section>
-      <ContentGrid />
-    </section>
-  );
+
+  return <section>{dish && drinks && order.date && <ContentGrid />}</section>;
 };
 
 export default ReceiptPage;

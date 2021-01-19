@@ -27,6 +27,8 @@ const FormSection = () => {
   const [submiting, setSubmitting] = useState(false);
 
   // Redux state
+  const { dish } = useSelector((state) => state.dishGet); // We need dish to add it to orders array when submit successfully.
+  const { drinks } = useSelector((state) => state.drinksStore); // We need drinks to add them to orders array when submit successfully.
   const order = useSelector((state) => state.order);
   const dispatch = useDispatch();
 
@@ -51,11 +53,11 @@ const FormSection = () => {
   // Check if submiting and order email has changed,
   // then dispatch add order to store and go to next page.
   if (submiting && order.email !== "") {
-    dispatch(addToOrdersAction(order));
+    dispatch(addToOrdersAction(order, dish, drinks));
     history.push("/receipt");
   }
 
-  // Disable confirm button
+  // Disable confirm button if error
   const disabled = order.date == null || formError ? true : false;
 
   // An easy way to pass props to child component
