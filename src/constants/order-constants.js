@@ -9,3 +9,6 @@ export const ORDER_PEOPLE_AMOUNT_SET = "ORDER_PEOPLE_AMOUNT_SET";
 
 // Reset order
 export const ORDER_RESET = "ORDER_RESET";
+
+// Orders store
+export const ORDERS_STORE_ADD = "ORDERS_STORE_ADD";

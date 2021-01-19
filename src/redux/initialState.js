@@ -13,6 +13,11 @@ const orderFromLocalStorage = localStorage.getItem("order")
   ? JSON.parse(localStorage.getItem("order"))
   : { date: null, email: "", peopleAmount: 1 };
 
+// Geting orders from local store
+const ordersFromLocalStorage = localStorage.getItem("orders")
+  ? JSON.parse(localStorage.getItem("orders"))
+  : [];
+
 // Initial state
 const initialState = {
   dishGet: {
@@ -21,6 +26,7 @@ const initialState = {
   },
   drinksStore: { drinks: drinksFromLocalStorage },
   order: { ...orderFromLocalStorage },
+  ordersStore: { orders: ordersFromLocalStorage },
 };
 
 export default initialState;
