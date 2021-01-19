@@ -2,7 +2,7 @@ import React from "react";
 // Redux
 import { useDispatch, useSelector } from "react-redux";
 // Redux actions
-import { setOrderDate } from "../../../../actions/order-actions";
+import { setOrderDateAction } from "../../../../actions/order-actions";
 //Date Picker
 import "react-modern-calendar-datepicker/lib/DatePicker.css";
 import {
@@ -26,7 +26,7 @@ const Calendar = () => {
     <Grid item md={12} style={{ padding: 12 }}>
       <DatePicker
         value={date}
-        onChange={(date) => dispatch(setOrderDate(date))}
+        onChange={(date) => dispatch(setOrderDateAction(date))}
         minimumDate={utils().getToday()}
         maximumDate={getMaximunDateParsed(3)}
         disabledDays={getDisableDays(3)}

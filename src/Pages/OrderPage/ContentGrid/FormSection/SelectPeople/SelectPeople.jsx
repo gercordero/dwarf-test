@@ -2,7 +2,7 @@ import React from "react";
 // Redux
 import { useSelector, useDispatch } from "react-redux";
 // Redux actions
-import { setOrderPeopleAmount } from "../../../../../actions/order-actions";
+import { setOrderPeopleAmountAction } from "../../../../../actions/order-actions";
 // Material UI
 import Typography from "@material-ui/core/Typography";
 import Select from "@material-ui/core/Select";
@@ -24,7 +24,9 @@ const SelectPeople = ({ maxPeople }) => {
         color="secondary"
         variant="outlined"
         style={{ width: "20%" }}
-        onChange={(event) => dispatch(setOrderPeopleAmount(event.target.value))}
+        onChange={(event) =>
+          dispatch(setOrderPeopleAmountAction(event.target.value))
+        }
       >
         {/* Create an array that has [maxPeople] elements and map through it */}
         {[...new Array(maxPeople).keys()].map((item) => (

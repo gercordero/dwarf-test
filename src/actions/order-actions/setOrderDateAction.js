@@ -1,6 +1,6 @@
 import { ORDER_DATE_SET } from "../../constants/order-constants";
 
-const setOrderDate = (date) => (dispatch, getState) => {
+const setOrderDateAction = (date) => (dispatch, getState) => {
   // Set order date
   dispatch({ type: ORDER_DATE_SET, payload: date });
 
@@ -11,4 +11,4 @@ const setOrderDate = (date) => (dispatch, getState) => {
   localStorage.setItem("order", JSON.stringify(order));
 };
 
-export default setOrderDate;
+export default setOrderDateAction;

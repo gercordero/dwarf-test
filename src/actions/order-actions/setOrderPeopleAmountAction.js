@@ -1,6 +1,6 @@
 import { ORDER_PEOPLE_AMOUNT_SET } from "../../constants/order-constants";
 
-const setOrderPeopleAmount = (amount) => (dispatch, getState) => {
+const setOrderPeopleAmountAction = (amount) => (dispatch, getState) => {
   // Set order people amount
   dispatch({ type: ORDER_PEOPLE_AMOUNT_SET, payload: amount });
 
@@ -11,4 +11,4 @@ const setOrderPeopleAmount = (amount) => (dispatch, getState) => {
   localStorage.setItem("order", JSON.stringify(order));
 };
 
-export default setOrderPeopleAmount;
+export default setOrderPeopleAmountAction;

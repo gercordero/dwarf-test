@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 // Redux
 import { useDispatch, useSelector } from "react-redux";
 // Redux actions
-import { setOrderEmail } from "../../../../actions/order-actions";
+import { setOrderEmailAction } from "../../../../actions/order-actions";
 // Components
 import SelectPeople from "./SelectPeople/SelectPeople";
 import EmailField from "./EmailField/EmailField";
@@ -34,7 +34,7 @@ const FormSection = () => {
     event.preventDefault();
 
     if (!formError) {
-      dispatch(setOrderEmail(formEmail));
+      dispatch(setOrderEmailAction(formEmail));
       history.push("/receipt");
     }
   };
