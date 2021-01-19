@@ -6,17 +6,19 @@ import Typography from "@material-ui/core/Typography";
 import { ImgContainer, StyledImg, TextContainer } from "./styles/Drink.styles";
 
 const Drink = ({ drink }) => {
+  const { image_url, name, count } = drink;
+
   return (
     <Grid container spacing={2}>
       {/* IMAGE */}
       <ImgContainer item sm={4} md={4}>
-        <StyledImg src={drink.image_url} alt={drink.name} />
+        <StyledImg src={image_url} alt={name} />
       </ImgContainer>
       {/* DRINK NAME */}
       <TextContainer item sm={8} md={8}>
         <Typography variant="body1">
           <strong>
-            {drink.name} x {drink.count}
+            {name} x {count}
           </strong>
         </Typography>
       </TextContainer>

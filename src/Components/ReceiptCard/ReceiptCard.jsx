@@ -3,15 +3,21 @@ import React from "react";
 import { useSelector } from "react-redux";
 // Components
 import { DrinksList } from "../";
+import Dish from "./Dish/Dish";
 // Material UI
 import Grid from "@material-ui/core/Grid";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 // Styled components
-import { StyledCard, DrinksContainer } from "./styles/ReceiptCard.styles";
+import {
+  StyledCard,
+  DishContainer,
+  DrinksContainer,
+} from "./styles/ReceiptCard.styles";
 
 const ReceiptCard = ({ md, sm, xs, style }) => {
+  const { dish } = useSelector((state) => state.dishGet);
   const { drinks } = useSelector((state) => state.drinksStore);
 
   return (
@@ -24,6 +30,16 @@ const ReceiptCard = ({ md, sm, xs, style }) => {
           </Typography>
           <Divider style={{ marginTop: "1rem" }} />
         </CardContent>
+        {/* Dish */}
+        <CardContent>
+          <Typography variant="h4" component="h2">
+            Dish
+          </Typography>
+          <DishContainer>
+            <Dish dish={dish} />
+          </DishContainer>
+          <Divider style={{ marginTop: "1rem" }} />
+        </CardContent>
         {/* Drinks */}
         <CardContent>
           <Typography variant="h4" component="h2">
@@ -33,7 +49,6 @@ const ReceiptCard = ({ md, sm, xs, style }) => {
             <DrinksList drinks={drinks} />
           </DrinksContainer>
         </CardContent>
-        {/* Dish */}
       </StyledCard>
     </Grid>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 // Components
-import Ingridients from "./Ingridients/Ingridients";
+import { Ingridients } from "../../../../Components";
 import GenerateNewDish from "./GenerateNewDish/GenerateNewDish";
 // Materail UI
 import Typography from "@material-ui/core/Typography";
